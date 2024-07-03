@@ -7,7 +7,7 @@
     </ul>
   </nav>
 
-  <p>Rest © 2024. Alguns direitos reservados.</p>
+  <p>Rest © <?php echo date('Y'); ?>. Alguns direitos reservados.</p>
 </footer>
 <!-- Footer WordPress -->
 <?php wp_footer(); ?>
