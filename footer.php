@@ -7,7 +7,7 @@
     </ul>
   </nav>
 
-  <p>Rest © <?php echo date('Y'); ?>. Alguns direitos reservados.</p>
+  <p><?php bloginfo('name'); ?> © <?php echo date('Y'); ?>. Alguns direitos reservados.</p>
 </footer>
 <!-- Footer WordPress -->
 <?php wp_footer(); ?>
