@@ -70,7 +70,6 @@ function cmb2_fields_home()
   ]);
 
   // Segunda categoria
-
   $cmb->add_field([
     'name' => 'Segundo prato',
     'desc'    => 'Insira a categoria do cardápio.',
@@ -209,5 +208,33 @@ function cmb2_fields_contato()
     'desc'    => 'Insira o telefone do cabeçalho do site.',
     'id' => 'telefone_header',
     'type' => 'text',
+  ]);
+
+  $cmb->add_field([
+    'name' => 'Link do Mapa',
+    'id' => 'link_mapa',
+    'desc' => 'Insira o link do mapa.',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_field([
+    'name' => 'Imagem do Mapa',
+    'id' => 'imagem_mapa',
+    'desc' => 'Insira uma imagem.',
+    'type' => 'file',
+    'options' => array(
+      'url' => false, // Hide the text input for the url
+    ),
+    'text'    => array(
+      'add_upload_file_text' => 'Adicione uma imagem.' // Change upload button text. Default: "Add or Upload File"
+    ),
+    // query_args are passed to wp.media's library query.
+    'query_args' => array(
+      'type' => [
+        'image/gif',
+        'image/jpeg',
+        'image/png',
+      ]
+    ),
   ]);
 }
