@@ -12,6 +12,34 @@ function the_field($key, $page_id = 0)
   echo get_field($key, $page_id);
 }
 
+// Todas as Páginas
+add_action('cmb2_admin_init', 'cmb2_fields_geral');
+function cmb2_fields_geral()
+{
+  $cmb = new_cmb2_box([
+    'id' => 'geral_box',
+    'title' => 'SEO',
+    'object_types' => ['page'],
+    // 'show_on' => [
+    //   'key' => 'page-template',
+    // ],
+  ]);
+
+  $cmb->add_field([
+    'name' => 'Titulo',
+    'desc' => 'Insira o titulo do site',
+    'id' => 'title_seo',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_field([
+    'name' => 'Metadescrição',
+    'desc' => 'Insira a metadescrição do site',
+    'id' => 'description_seo',
+    'type' => 'text',
+  ]);
+}
+
 // Página - Menu da Semana
 add_action('cmb2_admin_init', 'cmb2_fields_home');
 
@@ -194,6 +222,129 @@ function cmb2_fields_contato()
       'key' => 'page-template',
       'value' => 'page-contato.php',
     ],
+  ]);
+
+  $dados_conteudo = $cmb->add_field([
+    'name' => 'Dados Conteúdo 1',
+    'id' => 'dados_conteudo',
+    'type' => 'group',
+    // 'repeatable' => true,
+    'options' => [
+      'group_title' => 'Dado {#}',
+      'add_button' => 'Adicionar Dado',
+      'remove_button' => 'Remover Dado',
+      'sortable' => true,
+    ]
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Título',
+    'desc' => 'Insira o título do dado',
+    'id' => 'titulo',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Primeiro Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'primeiro_texto',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Segundo Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'segundo_texto',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Terceiro Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'terceiro_texto',
+    'type' => 'text_small',
+  ]);
+
+  $dados_conteudo = $cmb->add_field([
+    'name' => 'Dados Conteúdo 2',
+    'id' => 'dados_conteudo_dois',
+    'type' => 'group',
+    // 'repeatable' => true,
+    'options' => [
+      'group_title' => 'Dado {#}',
+      'add_button' => 'Adicionar Dado',
+      'remove_button' => 'Remover Dado',
+      'sortable' => true,
+    ]
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Título',
+    'desc' => 'Insira o título do dado',
+    'id' => 'titulo',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Primeiro Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'primeiro_texto',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Segundo Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'segundo_texto',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Terceiro Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'terceiro_texto',
+    'type' => 'text_small',
+  ]);
+
+  $dados_conteudo = $cmb->add_field([
+    'name' => 'Dados Conteúdo 3',
+    'id' => 'dados_conteudo_tres',
+    'type' => 'group',
+    // 'repeatable' => true,
+    'options' => [
+      'group_title' => 'Dado {#}',
+      'add_button' => 'Adicionar Dado',
+      'remove_button' => 'Remover Dado',
+      'sortable' => true,
+    ]
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Título',
+    'desc' => 'Insira o título do dado',
+    'id' => 'titulo',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Primeiro Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'primeiro_texto',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Segundo Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'segundo_texto',
+    'type' => 'text_small',
+  ]);
+
+  $cmb->add_group_field($dados_conteudo, [
+    'name' => 'Terceiro Texto',
+    'desc' => 'Insira o texto do dado',
+    'id' => 'terceiro_texto',
+    'type' => 'text_small',
   ]);
 
   $cmb->add_field([
