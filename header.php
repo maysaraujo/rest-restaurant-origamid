@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?php bloginfo('name'); ?></title>
+  <title><?php wp_title(''); ?> <?php the_field('title_seo'); ?></title>
+  <!-- <?php bloginfo('name'); ?>  -->
+  <meta name="description" content="<?php wp_title(''); ?> <?php the_field('description_seo'); ?>">
 
   <link href='https://fonts.googleapis.com/css?family=Alegreya+SC' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
