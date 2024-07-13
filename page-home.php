@@ -7,7 +7,7 @@
 		<section class="container">
 			<h2 class="subtitulo"><?php the_title(); ?></h2>
 
-			<div class="menu-item grid-8">
+			<div class="menu-prato grid-8">
 				<h2><?php the_field('primeiro_prato'); ?></h2>
 				<ul>
 					<?php
@@ -27,7 +27,7 @@
 				</ul>
 			</div>
 
-			<div class="menu-item grid-8">
+			<div class="menu-prato grid-8">
 				<h2><?php the_field('segundo_prato'); ?></h2>
 				<ul>
 					<?php
