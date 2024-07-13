@@ -12,22 +12,43 @@
 			</div>
 
 			<div class="grid-1-3 contato-item">
-				<h2>Dados</h2>
-				<p>21 2422-9999</p>
-				<p>contato@rest.com</p>
-				<p>facebook.com/rest/</p>
+				<?php
+				$dados_conteudo = get_field('dados_conteudo');
+				if (isset($dados_conteudo)) {
+					foreach ($dados_conteudo as $dados) {
+				?>
+						<h2><?php echo $dados['titulo'] ?></h2>
+						<p><?php echo $dados['primeiro_texto'] ?></p>
+						<p><?php echo $dados['segundo_texto'] ?></p>
+						<p><?php echo $dados['terceiro_texto'] ?></p>
+				<?php }
+				} ?>
 			</div>
 			<div class="grid-1-3 contato-item">
-				<h2>Horários</h2>
-				<p>Segunda à Sexta: 10 às 23</p>
-				<p>Sábado: 14 às 23</p>
-				<p>Domingo: 14 às 22</p>
+				<?php
+				$dados_conteudo2 = get_field('dados_conteudo_dois');
+				if (isset($dados_conteudo2)) {
+					foreach ($dados_conteudo2 as $dados) {
+				?>
+						<h2><?php echo $dados['titulo'] ?></h2>
+						<p><?php echo $dados['primeiro_texto'] ?></p>
+						<p><?php echo $dados['segundo_texto'] ?></p>
+						<p><?php echo $dados['terceiro_texto'] ?></p>
+				<?php }
+				} ?>
 			</div>
 			<div class="grid-1-3 contato-item">
-				<h2>Endereço</h2>
-				<p>Rua Marechal, 29</p>
-				<p>Copacabana - Rio de Janeiro</p>
-				<p>Brasil - Terra - Via Láctea</p>
+				<?php
+				$dados_conteudo3 = get_field('dados_conteudo_tres');
+				if (isset($dados_conteudo3)) {
+					foreach ($dados_conteudo3 as $dados) {
+				?>
+						<h2><?php echo $dados['titulo'] ?></h2>
+						<p><?php echo $dados['primeiro_texto'] ?></p>
+						<p><?php echo $dados['segundo_texto'] ?></p>
+						<p><?php echo $dados['terceiro_texto'] ?></p>
+				<?php }
+				} ?>
 			</div>
 		</section>
 
